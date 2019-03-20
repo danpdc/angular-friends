@@ -5,6 +5,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AboutModule } from './about/about.module';
+import { CustomersModule } from './customers/customers.module'
 
 
 @NgModule({
@@ -14,6 +15,7 @@ import { AboutModule } from './about/about.module';
   imports: [
     BrowserModule,
     AboutModule,
+    CustomersModule,
     AppRoutingModule
   ],
   providers: [],
