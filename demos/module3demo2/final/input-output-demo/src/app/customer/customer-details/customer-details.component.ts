@@ -1,9 +1,10 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   selector: 'app-customer-details',
   templateUrl: './customer-details.component.html',
-  styleUrls: ['./customer-details.component.css']
+  styleUrls: ['./customer-details.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CustomerDetailsComponent implements OnInit {
 
@@ -12,6 +13,10 @@ export class CustomerDetailsComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    this.customer.name = "Tina Doe";
+    setTimeout(()=> {
+      this.customer.name = "SomeOther Doe";
+    }, 2000);
   }
 
   change() {
