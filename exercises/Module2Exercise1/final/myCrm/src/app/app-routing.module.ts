@@ -4,7 +4,7 @@ import { AppComponent } from './app.component';
 
 const app_routes: Routes = [
   { path: '', component: AppComponent},
-  { path: 'about', loadChildren: 'app/about/about.module#AboutModule' },
+  { path: 'about', loadChildren: './about/about.module#AboutModule' },
   { path: 'customers', loadChildren: 'app/customers/customers.module#CustomersModule'},
   { path: '**', pathMatch: 'full', redirectTo: '/about' } // catch any unfound routes and redirect to home page
 ];
